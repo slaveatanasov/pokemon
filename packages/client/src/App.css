@@ -1,0 +1,99 @@
+@import '~antd/dist/antd.css';
+
+.App {
+  text-align: center;
+}
+
+.container {
+  background-color: #e7e7e7;
+  min-height: 100vh;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.container .card {
+  background-color: white;
+}
+
+.container h1 {
+  font-size: 3.5rem;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.panel-component {
+  width: auto;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.panel-button {
+  margin: 1rem;
+}
+
+.panel-input {
+  width: 415px;
+  display: block;
+}
+
+/* Pokeball loader */
+.ball {
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: white;
+  position: relative;
+  box-shadow: -20px 0 rgba(0, 0, 0, 0.1) inset;
+  animation: roll 1s ease-in-out infinite;
+  background: linear-gradient(
+    to bottom,
+    #e83e35 0%,
+    #e83e35 50.5%,
+    #ffffff 50.51%,
+    #ffffff 100%
+  );
+}
+
+.ball:after {
+  content: "";
+  position: absolute;
+  top: calc(100px - 3px);
+  left: 0;
+  width: 200px;
+  height: 6px;
+  background: #3f3f3f;
+}
+
+.ball:before {
+  content: "";
+  position: absolute;
+  top: 75px;
+  left: 75px;
+  width: 50px;
+  height: 50px;
+  border: solid 6px #3f3f3f;
+  border-radius: 50%;
+  background: white;
+  z-index: 1;
+  box-shadow: 0 0 15px -2px #c62828 inset;
+  animation: button 3s ease infinite;
+}
+
+@keyframes roll {
+  from {
+    transform: rotate(0);
+  }
+  90%,
+  to {
+    transform: rotate(720deg);
+  }
+}
